@@ -69,7 +69,7 @@
 
 // console.log(nombre);
 
-// console.log(confirm("Estas seguro?"));
+//console.log(confirm("Estas seguro?"));
 
 //Manipulacion de Tipos
 

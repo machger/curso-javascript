@@ -175,7 +175,7 @@ Ejemplo:
   el usuario.
   En caso de que la contrasena no cumpla con el requisito anterior, se debe mostrar un mensaje de error. De lo contrario, se debe mostrar un
   mensaje de exito informando al usuario que se completo el registro. (OTRA PISTA: Para ver como validar la longitud de un string, pueden ver el siguiente
-    enlace: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length )
+    enlace: h ttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length )
 
 */
 let isRegistered, registerUserName, registerPassword;
