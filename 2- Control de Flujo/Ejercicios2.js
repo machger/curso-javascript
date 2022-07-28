@@ -40,7 +40,7 @@ confirmacion = confirm(
   "Bienvenido a mi App...Quieres registrarte...? pulsa Aceptar para continuar.. o Cancelar para salir"
 );
 console.log(confirmacion);
-if (confirmacion === true) {
+if (confirmacion) {
   usuarioRegistro = prompt("Ingrese un nombre de usuario");
   if (usuarioRegistro.length >= 3) {
     usuarioRegistro = usuarioRegistro.toLowerCase();
