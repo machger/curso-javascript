@@ -56,7 +56,6 @@ if (confirmacion === true) {
 } else {
   alert("Saliendo del Registro");
 }
-console.log(usuarioRegistro);
 //2) LOGIN
 
 login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
