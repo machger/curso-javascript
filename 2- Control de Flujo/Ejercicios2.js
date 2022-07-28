@@ -34,40 +34,21 @@
 //CODING CHALLENGE
 
 //1) REGISTRO.
-let usuarioRegistro;
-let contraseñaRegistro;
+let seRegistro, usuarioRegistro, contraseñaRegistro;
 
 confirmacion = confirm(
   "Bienvenido a mi App...Quieres registrarte...? pulsa Aceptar para continuar.. o Cancelar para salir"
 );
 console.log(confirmacion);
 if (confirmacion === true) {
-  let usuarioRegistro = prompt("Ingrese un nombre de usuario");
+  usuarioRegistro = prompt("Ingrese un nombre de usuario");
   if (usuarioRegistro.length >= 3) {
     usuarioRegistro = usuarioRegistro.toLowerCase();
     console.log(usuarioRegistro);
-    let contraseñaRegistro = prompt("Ingrese una contraseña ");
+    contraseñaRegistro = prompt("Ingrese una contraseña ");
     if (contraseñaRegistro.length >= 6) {
       alert("Registro ingresado satisfactoriamente ");
-      //2) LOGIN
-      login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
-      console.log(login);
-      if (login) {
-        let usuarioLogin = prompt("Ingrese su Usuario ");
-        usuarioLogin = usuarioLogin.toLocaleLowerCase();
-        let contraseñaLogin = prompt("Ingrese su Contraseña ");
-        console.log(usuarioRegistro);
-        if (
-          usuarioLogin === usuarioRegistro &&
-          contraseñaLogin === contraseñaRegistro
-        ) {
-          alert("Login Exitoso");
-        } else {
-          alert("Login Erroneo");
-        }
-      } else {
-        alert("Saliendo del Login");
-      }
+      seRegistro = true;
     } else {
       alert("Contraseña invalida ");
     }
@@ -78,4 +59,23 @@ if (confirmacion === true) {
   alert("Saliendo del Registro");
 }
 
+//2) LOGIN
+login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
+console.log(login);
+if (seRegistro && login) {
+  let usuarioLogin = prompt("Ingrese su Usuario ");
+  usuarioLogin = usuarioLogin.toLocaleLowerCase();
+  let contraseñaLogin = prompt("Ingrese su Contraseña ");
+  console.log(usuarioRegistro);
+  if (
+    usuarioLogin === usuarioRegistro &&
+    contraseñaLogin === contraseñaRegistro
+  ) {
+    alert("Login Exitoso");
+  } else {
+    alert("Login Erroneo");
+  }
+} else {
+  alert("Saliendo del Login");
+}
 console.log(usuarioRegistro);
