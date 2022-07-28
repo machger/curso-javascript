@@ -49,26 +49,27 @@ if (confirmacion === true) {
     let contraseñaRegistro = prompt("Ingrese una contraseña ");
     if (contraseñaRegistro.length >= 6) {
       alert("Registro ingresado satisfactoriamente ");
-//2) LOGIN      
+      //2) LOGIN
       login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
       console.log(login);
       if (login) {
-         let usuarioLogin = prompt("Ingrese su Usuario ");
-         usuarioLogin = usuarioLogin.toLocaleLowerCase();
-         let contraseñaLogin = prompt("Ingrese su Contraseña ");
-         console.log(usuarioRegistro);
-        if (usuarioLogin === usuarioRegistro &&
-            contraseñaLogin === contraseñaRegistro) {
-            alert("Login Exitoso");
+        let usuarioLogin = prompt("Ingrese su Usuario ");
+        usuarioLogin = usuarioLogin.toLocaleLowerCase();
+        let contraseñaLogin = prompt("Ingrese su Contraseña ");
+        console.log(usuarioRegistro);
+        if (
+          usuarioLogin === usuarioRegistro &&
+          contraseñaLogin === contraseñaRegistro
+        ) {
+          alert("Login Exitoso");
         } else {
           alert("Login Erroneo");
-          }
+        }
       } else {
-          alert("Saliendo del Login");
+        alert("Saliendo del Login");
       }
-
     } else {
-        alert("Contraseña invalida ");
+      alert("Contraseña invalida ");
     }
   } else {
     alert("Usuario invalido");
@@ -78,5 +79,3 @@ if (confirmacion === true) {
 }
 
 console.log(usuarioRegistro);
-
-
