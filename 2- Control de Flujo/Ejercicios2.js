@@ -126,13 +126,13 @@ if (confirmacion) {
         bucleContraseña = false;
       } else if (contraseñaLogin === contraseñaRegistro) {
         bucleContraseña = false;
+        alert("Login Exitoso");
       } else {
         bucleContraseña = true;
       }
       console.log(contraseñaRegistro);
       console.log(contraseñaLogin);
     } while (bucleContraseña);
-    alert("Login Exitoso");
   } else {
     alert("Saliendo del Login");
   }
