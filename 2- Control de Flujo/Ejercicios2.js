@@ -102,24 +102,42 @@ if (confirmacion) {
   } while (contraseñaRegistro.length < 6);
   alert("Registro ingresado satisfactoriamente ");
   seRegistro = true;
+  login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
+  console.log(login);
+  if (seRegistro && login) {
+    let usuarioLogin, contraseñaLogin, bucleUsuario, bucleContraseña;
+    do {
+      console.log(usuarioLogin);
+      usuarioLogin = prompt("Ingrese el Usuario ");
+      usuarioLogin = usuarioLogin.toLocaleLowerCase();
+      if (usuarioLogin === null) {
+        bucleUsuario = false;
+      } else if (usuarioLogin === usuarioRegistro) {
+        bucleUsuario = false;
+      } else {
+        bucleUsuario = true;
+      }
+      console.log(usuarioRegistro);
+      console.log(usuarioLogin);
+    } while (bucleUsuario);
+    do {
+      contraseñaLogin = prompt("Ingrese la Contraseña ");
+      if (contraseñaLogin === null) {
+        bucleContraseña = false;
+      } else if (contraseñaLogin === contraseñaRegistro) {
+        bucleContraseña = false;
+      } else {
+        bucleContraseña = true;
+      }
+      console.log(contraseñaRegistro);
+      console.log(contraseñaLogin);
+    } while (bucleContraseña);
+    alert("Login Exitoso");
+  } else {
+    alert("Saliendo del Login");
+  }
 } else {
   alert("Saliendo del Registro");
 }
 
-login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
-console.log(login);
-if (seRegistro && login) {
-  do {
-    let usuarioLogin = prompt("Ingrese el Usuario ");
-    usuarioLogin = usuarioLogin.toLocaleLowerCase();
-    let contraseñaLogin = prompt("Ingrese la Contraseña ");
-    console.log(usuarioRegistro);
-  } while (
-    usuarioLogin !== usuarioRegistro &&
-    contraseñaLogin !== contraseñaRegistro
-  );
-  alert("Login Exitoso");
-} else {
-  alert("Saliendo del Login");
-}
 console.log(usuarioRegistro);
