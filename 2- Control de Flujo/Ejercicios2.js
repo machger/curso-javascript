@@ -34,6 +34,53 @@
 //CODING CHALLENGE
 
 //1) REGISTRO.
+// let seRegistro, usuarioRegistro, contraseñaRegistro;
+
+// confirmacion = confirm(
+//   "Bienvenido a mi App...Quieres registrarte...? pulsa Aceptar para continuar.. o Cancelar para salir"
+// );
+// console.log(confirmacion);
+// if (confirmacion) {
+//   usuarioRegistro = prompt("Ingrese un nombre de usuario");
+//   if (usuarioRegistro.length >= 3) {
+//     usuarioRegistro = usuarioRegistro.toLowerCase();
+//     console.log(usuarioRegistro);
+//     contraseñaRegistro = prompt("Ingrese una contraseña ");
+//     if (contraseñaRegistro.length >= 6) {
+//       alert("Registro ingresado satisfactoriamente ");
+//       seRegistro = true;
+//     } else {
+//       alert("Contraseña invalida ");
+//     }
+//   } else {
+//     alert("Usuario invalido");
+//   }
+// } else {
+//   alert("Saliendo del Registro");
+// }
+
+//2) LOGIN
+// login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
+// console.log(login);
+// if (seRegistro && login) {
+//   let usuarioLogin = prompt("Ingrese su Usuario ");
+//   usuarioLogin = usuarioLogin.toLocaleLowerCase();
+//   let contraseñaLogin = prompt("Ingrese su Contraseña ");
+//   console.log(usuarioRegistro);
+//   if (
+//     usuarioLogin === usuarioRegistro &&
+//     contraseñaLogin === contraseñaRegistro
+//   ) {
+//     alert("Login Exitoso");
+//   } else {
+//     alert("Login Erroneo");
+//   }
+// } else {
+//   alert("Saliendo del Login");
+// }
+// console.log(usuarioRegistro);
+
+//*3) EXTRA
 let seRegistro, usuarioRegistro, contraseñaRegistro;
 
 confirmacion = confirm(
@@ -41,40 +88,37 @@ confirmacion = confirm(
 );
 console.log(confirmacion);
 if (confirmacion) {
-  usuarioRegistro = prompt("Ingrese un nombre de usuario");
-  if (usuarioRegistro.length >= 3) {
-    usuarioRegistro = usuarioRegistro.toLowerCase();
-    console.log(usuarioRegistro);
-    contraseñaRegistro = prompt("Ingrese una contraseña ");
-    if (contraseñaRegistro.length >= 6) {
-      alert("Registro ingresado satisfactoriamente ");
-      seRegistro = true;
-    } else {
-      alert("Contraseña invalida ");
-    }
-  } else {
-    alert("Usuario invalido");
-  }
+  do {
+    usuarioRegistro = prompt(
+      "Ingrese un nombre de usuario de longitud igual o mayor a 3 caracteres"
+    );
+  } while (usuarioRegistro.length < 3);
+  usuarioRegistro = usuarioRegistro.toLowerCase();
+  console.log(usuarioRegistro);
+  do {
+    contraseñaRegistro = prompt(
+      "Ingrese una contraseña de longitud igual o mayor a 6 caracteres"
+    );
+  } while (contraseñaRegistro.length < 6);
+  alert("Registro ingresado satisfactoriamente ");
+  seRegistro = true;
 } else {
   alert("Saliendo del Registro");
 }
 
-//2) LOGIN
 login = confirm("Hola ... Saludos ..Deseas iniciar sesion en la App..? ");
 console.log(login);
 if (seRegistro && login) {
-  let usuarioLogin = prompt("Ingrese su Usuario ");
-  usuarioLogin = usuarioLogin.toLocaleLowerCase();
-  let contraseñaLogin = prompt("Ingrese su Contraseña ");
-  console.log(usuarioRegistro);
-  if (
-    usuarioLogin === usuarioRegistro &&
-    contraseñaLogin === contraseñaRegistro
-  ) {
-    alert("Login Exitoso");
-  } else {
-    alert("Login Erroneo");
-  }
+  do {
+    let usuarioLogin = prompt("Ingrese el Usuario ");
+    usuarioLogin = usuarioLogin.toLocaleLowerCase();
+    let contraseñaLogin = prompt("Ingrese la Contraseña ");
+    console.log(usuarioRegistro);
+  } while (
+    usuarioLogin !== usuarioRegistro &&
+    contraseñaLogin !== contraseñaRegistro
+  );
+  alert("Login Exitoso");
 } else {
   alert("Saliendo del Login");
 }
